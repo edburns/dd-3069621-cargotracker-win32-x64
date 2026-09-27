@@ -37,9 +37,11 @@ public class DefaultBookingServiceFacade implements BookingServiceFacade,
     @Inject
     private VoyageRepository voyageRepository;
 
+    // Required by CDI for field injection.
     public DefaultBookingServiceFacade() {
     }
 
+    // Allows container-free tests to provide the application service.
     DefaultBookingServiceFacade(BookingService bookingService) {
         this.bookingService = bookingService;
     }
