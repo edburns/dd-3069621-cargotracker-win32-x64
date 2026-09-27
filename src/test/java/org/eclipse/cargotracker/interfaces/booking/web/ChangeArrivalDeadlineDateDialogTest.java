@@ -5,11 +5,16 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
 
 public class ChangeArrivalDeadlineDateDialogTest {
 
@@ -48,6 +53,21 @@ public class ChangeArrivalDeadlineDateDialogTest {
 
         assertEquals("", primeFaces.closeResult);
         assertNull(primeFaces.path);
+    }
+
+    @Test
+    public void updateProcessesFormContainingDeadlineInput() throws IOException {
+        String xhtml = new String(Files.readAllBytes(Paths.get(
+                "src/main/webapp/admin/dialogs/changeArrivalDeadlineDate.xhtml")), StandardCharsets.UTF_8);
+        String updateButtonStart = "<p:commandButton value=\"Update\"";
+        int start = xhtml.indexOf(updateButtonStart);
+        assertTrue(start >= 0);
+        int end = xhtml.indexOf("/>", start);
+        assertTrue(end > start);
+        String updateButton = xhtml.substring(start, end);
+
+        assertTrue(updateButton.contains("action=\"#{changeArrivalDeadlineDate.changeArrivalDeadline()}\""));
+        assertTrue(updateButton.contains("process=\"@form\""));
     }
 
     private static class FakePrimeFaces extends PrimeFaces {
