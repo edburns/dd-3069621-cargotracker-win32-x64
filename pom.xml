@@ -136,6 +136,17 @@
 
 	<build>
 		<finalName>cargo-tracker</finalName>
+		<testResources>
+			<testResource>
+				<directory>src/test/resources</directory>
+			</testResource>
+			<testResource>
+				<directory>src/main/webapp</directory>
+				<includes>
+					<include>admin/dialogs/changeArrivalDeadlineDate.xhtml</include>
+				</includes>
+			</testResource>
+		</testResources>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

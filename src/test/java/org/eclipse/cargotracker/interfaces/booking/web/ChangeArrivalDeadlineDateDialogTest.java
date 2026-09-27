@@ -8,8 +8,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.io.InputStream;
 import java.util.List;
 import java.util.Map;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -59,23 +58,14 @@ public class ChangeArrivalDeadlineDateDialogTest {
 
     @Test
     public void updateProcessesFormContainingDeadlineInput() throws Exception {
-        java.nio.file.Path directory = Paths.get(getClass().getProtectionDomain()
-                .getCodeSource().getLocation().toURI());
-        java.nio.file.Path view = null;
-        while (directory != null) {
-            java.nio.file.Path candidate = directory.resolve(
-                    "src/main/webapp/admin/dialogs/changeArrivalDeadlineDate.xhtml");
-            if (Files.exists(candidate)) {
-                view = candidate;
-                break;
-            }
-            directory = directory.getParent();
-        }
-        assertNotNull(view);
-
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         factory.setNamespaceAware(true);
-        Document document = factory.newDocumentBuilder().parse(view.toFile());
+        Document document;
+        try (InputStream view = getClass().getResourceAsStream(
+                "/admin/dialogs/changeArrivalDeadlineDate.xhtml")) {
+            assertNotNull(view);
+            document = factory.newDocumentBuilder().parse(view);
+        }
         NodeList commandButtons = document.getElementsByTagNameNS("http://primefaces.org/ui", "commandButton");
         Element updateButton = null;
         for (int i = 0; i < commandButtons.getLength(); i++) {
@@ -89,6 +79,7 @@ public class ChangeArrivalDeadlineDateDialogTest {
         assertNotNull(updateButton);
         assertEquals("#{changeArrivalDeadlineDate.changeArrivalDeadline()}", updateButton.getAttribute("action"));
         assertEquals("@form", updateButton.getAttribute("process"));
+        assertEquals("@form", updateButton.getAttribute("update"));
     }
 
     private static class FakePrimeFaces extends PrimeFaces {
