@@ -1,20 +1,22 @@
 package org.eclipse.cargotracker.interfaces.booking.web;
 
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 import org.primefaces.PrimeFaces;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.Map;
+import javax.xml.parsers.DocumentBuilderFactory;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
 
 public class ChangeArrivalDeadlineDateDialogTest {
 
@@ -56,18 +58,37 @@ public class ChangeArrivalDeadlineDateDialogTest {
     }
 
     @Test
-    public void updateProcessesFormContainingDeadlineInput() throws IOException {
-        String xhtml = new String(Files.readAllBytes(Paths.get(
-                "src/main/webapp/admin/dialogs/changeArrivalDeadlineDate.xhtml")), StandardCharsets.UTF_8);
-        String updateButtonStart = "<p:commandButton value=\"Update\"";
-        int start = xhtml.indexOf(updateButtonStart);
-        assertTrue(start >= 0);
-        int end = xhtml.indexOf("/>", start);
-        assertTrue(end > start);
-        String updateButton = xhtml.substring(start, end);
+    public void updateProcessesFormContainingDeadlineInput() throws Exception {
+        java.nio.file.Path directory = Paths.get(getClass().getProtectionDomain()
+                .getCodeSource().getLocation().toURI());
+        java.nio.file.Path view = null;
+        while (directory != null) {
+            java.nio.file.Path candidate = directory.resolve(
+                    "src/main/webapp/admin/dialogs/changeArrivalDeadlineDate.xhtml");
+            if (Files.exists(candidate)) {
+                view = candidate;
+                break;
+            }
+            directory = directory.getParent();
+        }
+        assertNotNull(view);
 
-        assertTrue(updateButton.contains("action=\"#{changeArrivalDeadlineDate.changeArrivalDeadline()}\""));
-        assertTrue(updateButton.contains("process=\"@form\""));
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        factory.setNamespaceAware(true);
+        Document document = factory.newDocumentBuilder().parse(view.toFile());
+        NodeList commandButtons = document.getElementsByTagNameNS("http://primefaces.org/ui", "commandButton");
+        Element updateButton = null;
+        for (int i = 0; i < commandButtons.getLength(); i++) {
+            Element button = (Element) commandButtons.item(i);
+            if ("Update".equals(button.getAttribute("value"))) {
+                updateButton = button;
+                break;
+            }
+        }
+
+        assertNotNull(updateButton);
+        assertEquals("#{changeArrivalDeadlineDate.changeArrivalDeadline()}", updateButton.getAttribute("action"));
+        assertEquals("@form", updateButton.getAttribute("process"));
     }
 
     private static class FakePrimeFaces extends PrimeFaces {
