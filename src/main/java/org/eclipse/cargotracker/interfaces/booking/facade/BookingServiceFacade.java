@@ -21,6 +21,15 @@ public interface BookingServiceFacade {
 
     void changeDestination(String trackingId, String destinationUnLocode);
 
+    /**
+     * Changes a cargo's arrival deadline. Deadlines are not required to be in
+     * the future.
+     *
+     * @param trackingId tracking ID of an existing cargo
+     * @param arrivalDeadline new arrival deadline
+     */
+    void changeDeadline(String trackingId, Date arrivalDeadline);
+
     List<RouteCandidate> requestPossibleRoutesForCargo(String trackingId);
 
     List<Location> listShippingLocations();
