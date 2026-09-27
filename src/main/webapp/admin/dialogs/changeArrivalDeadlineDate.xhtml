@@ -32,7 +32,8 @@
 
                 <p:commandButton value="Cancel"
                                  action="#{changeArrivalDeadlineDateDialog.cancel()}"
-                                 immediate="true"/>
+                                 immediate="true"
+                                 process="@this"/>
                 <p:commandButton value="Update"
                                  action="#{changeArrivalDeadlineDate.changeArrivalDeadline()}"
                                  update="@form"/>
