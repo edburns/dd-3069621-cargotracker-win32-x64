@@ -11,6 +11,7 @@ import org.junit.Test;
 import java.io.InputStream;
 import java.util.List;
 import java.util.Map;
+import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 import static org.junit.Assert.assertEquals;
@@ -60,9 +61,15 @@ public class ChangeArrivalDeadlineDateDialogTest {
     public void updateProcessesFormContainingDeadlineInput() throws Exception {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         factory.setNamespaceAware(true);
+        factory.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
+        factory.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
+        factory.setFeature("http://xml.org/sax/features/external-general-entities", false);
+        factory.setFeature("http://xml.org/sax/features/external-parameter-entities", false);
+        factory.setXIncludeAware(false);
+        factory.setExpandEntityReferences(false);
         Document document;
         try (InputStream view = getClass().getResourceAsStream(
-                "/admin/dialogs/changeArrivalDeadlineDate.xhtml")) {
+                "/changeArrivalDeadlineDate.xhtml")) {
             assertNotNull(view);
             document = factory.newDocumentBuilder().parse(view);
         }

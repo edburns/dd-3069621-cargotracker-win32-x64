@@ -141,10 +141,7 @@
 				<directory>src/test/resources</directory>
 			</testResource>
 			<testResource>
-				<directory>src/main/webapp</directory>
-				<includes>
-					<include>admin/dialogs/changeArrivalDeadlineDate.xhtml</include>
-				</includes>
+				<directory>src/main/webapp/admin/dialogs</directory>
 			</testResource>
 		</testResources>
 		<plugins>
