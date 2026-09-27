@@ -7,7 +7,6 @@ import org.eclipse.cargotracker.domain.model.location.UnLocode;
 
 import org.junit.Test;
 
-import java.lang.reflect.Field;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
@@ -18,14 +17,10 @@ import static org.junit.Assert.assertSame;
 public class DefaultBookingServiceFacadeTest {
 
     @Test
-    public void changeDeadlineConvertsTrackingIdAndDelegatesOriginalDateOnce()
-            throws Exception {
-        DefaultBookingServiceFacade facade = new DefaultBookingServiceFacade();
+    public void changeDeadlineConvertsTrackingIdAndDelegatesOriginalDateOnce() {
         BookingServiceSpy bookingService = new BookingServiceSpy();
-        Field bookingServiceField = DefaultBookingServiceFacade.class
-                .getDeclaredField("bookingService");
-        bookingServiceField.setAccessible(true);
-        bookingServiceField.set(facade, bookingService);
+        DefaultBookingServiceFacade facade = new DefaultBookingServiceFacade(
+                bookingService);
 
         Date deadline = new Date(123456789L);
         facade.changeDeadline("ABC123", deadline);

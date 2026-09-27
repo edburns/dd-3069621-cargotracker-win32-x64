@@ -37,6 +37,13 @@ public class DefaultBookingServiceFacade implements BookingServiceFacade,
     @Inject
     private VoyageRepository voyageRepository;
 
+    public DefaultBookingServiceFacade() {
+    }
+
+    DefaultBookingServiceFacade(BookingService bookingService) {
+        this.bookingService = bookingService;
+    }
+
     @Override
     public List<org.eclipse.cargotracker.interfaces.booking.facade.dto.Location> listShippingLocations() {
         List<Location> allLocations = locationRepository.findAll();
