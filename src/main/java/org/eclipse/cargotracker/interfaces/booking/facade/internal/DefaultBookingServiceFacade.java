@@ -37,15 +37,6 @@ public class DefaultBookingServiceFacade implements BookingServiceFacade,
     @Inject
     private VoyageRepository voyageRepository;
 
-    // Required by CDI for field injection.
-    public DefaultBookingServiceFacade() {
-    }
-
-    // Allows container-free tests to provide the application service.
-    DefaultBookingServiceFacade(BookingService bookingService) {
-        this.bookingService = bookingService;
-    }
-
     @Override
     public List<org.eclipse.cargotracker.interfaces.booking.facade.dto.Location> listShippingLocations() {
         List<Location> allLocations = locationRepository.findAll();
