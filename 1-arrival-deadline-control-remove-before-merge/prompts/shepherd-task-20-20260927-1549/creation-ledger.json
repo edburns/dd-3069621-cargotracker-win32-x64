@@ -1,0 +1,52 @@
+[
+  {
+    "implementationSubsection": "4.1 — Issue 1: Add the application-layer deadline change operation",
+    "bodyFile": "issue-bodies/01-4.1-body.md",
+    "id": 5605755104,
+    "number": 2,
+    "title": "4.1: Add the application-layer deadline change operation",
+    "url": "https://github.com/edburns/dd-3069621-cargotracker-win32-x64/issues/2",
+    "body_verified": true,
+    "linked": true
+  },
+  {
+    "implementationSubsection": "4.2 — Issue 2: Expose deadline changes through the booking facade",
+    "bodyFile": "issue-bodies/02-4.2-body.md",
+    "id": 5605755334,
+    "number": 3,
+    "title": "4.2: Expose deadline changes through the booking facade",
+    "url": "https://github.com/edburns/dd-3069621-cargotracker-win32-x64/issues/3",
+    "body_verified": true,
+    "linked": true
+  },
+  {
+    "implementationSubsection": "4.3 — Issue 3: Implement the deadline editor backing model",
+    "bodyFile": "issue-bodies/03-4.3-body.md",
+    "id": 5605755542,
+    "number": 4,
+    "title": "4.3: Implement the deadline editor backing model",
+    "url": "https://github.com/edburns/dd-3069621-cargotracker-win32-x64/issues/4",
+    "body_verified": true,
+    "linked": true
+  },
+  {
+    "implementationSubsection": "4.4 — Issue 4: Implement the PrimeFaces deadline dialog",
+    "bodyFile": "issue-bodies/04-4.4-body.md",
+    "id": 5605755756,
+    "number": 5,
+    "title": "4.4: Implement the PrimeFaces deadline dialog",
+    "url": "https://github.com/edburns/dd-3069621-cargotracker-win32-x64/issues/5",
+    "body_verified": true,
+    "linked": true
+  },
+  {
+    "implementationSubsection": "4.5 — Issue 5: Integrate deadline editing into the Administration dashboard",
+    "bodyFile": "issue-bodies/05-4.5-body.md",
+    "id": 5605755960,
+    "number": 6,
+    "title": "4.5: Integrate deadline editing into the Administration dashboard",
+    "url": "https://github.com/edburns/dd-3069621-cargotracker-win32-x64/issues/6",
+    "body_verified": true,
+    "linked": true
+  }
+]

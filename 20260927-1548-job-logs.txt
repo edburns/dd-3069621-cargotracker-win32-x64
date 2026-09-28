@@ -1,0 +1,206 @@
+
+Message                                                                                                                                        NoNewLine ForegroundCo
+                                                                                                                                                                  lor
+-------                                                                                                                                        --------- ------------
+=== shepherd-task Cargo Tracker run ===                                                                                                            False         Cyan
+Repository:          edburns/dd-3069621-cargotracker-win32-x64                                                                                     False         Gray
+Workareas directory: C:\Users\edburns\workareas                                                                                                    False         Gray
+Fixture root:        C:\Users\edburns\.copilot\plugins\shepherd-task\test\cargotracker-add-change-arrival-deadline-feature                         False         Gray
+Primary checkout:    C:\Users\edburns\workareas\dd-3069621-cargotracker-win32-x64-shepherd-target                                                  False         Gray
+Control worktree:    C:\Users\edburns\workareas\dd-3069621-cargotracker-win32-x64-shepherd-control                                                 False         Gray
+Source branch:       20260902-2104Z-commit-e7b651f-liberty                                                                                         False         Gray
+Baseline branch:     experiment/shepherd-shared-baseline                                                                                           False         Gray
+Control branch:      experiment/shepherd-control                                                                                                   False         Gray
+                                                                                                                                                   False         Gray
+[shepherd] Canonical lifecycle: Stage 00 -> Stage 10 -> research gate -> Stage 15 -> Stage 20 -> Stage 25 -> Stage 30 -> Stage 40 -> Stage 50.     False         Gray
+[shepherd] Stage 10 and the human/Copilot research gate are not run live.                                                                          False         Gray
+[shepherd] This deterministic control fixture writes an already-resolved plan in their place.                                                      False         Gray
+[shepherd] Repository setup, offline contracts, and final verification are experiment operations, not shepherd-task stages.                        False         Gray
+[shepherd] Experiment setup: validating prerequisites.                                                                                             False        White
+[shepherd] Experiment setup: running offline contracts.                                                                                            False        White
+[shepherd] Experiment setup: checking the disposable repository.                                                                                   False        White
+[shepherd] Experiment setup: cloning the primary checkout.                                                                                         False        White
+[shepherd] Experiment setup: publishing the immutable baseline.                                                                                    False        White
+[shepherd] Experiment setup: creating the control worktree.                                                                                        False        White
+                                                                                                                                                   False         Gray
+[shepherd] Stage 00 - Initialize campaign                                                                                                          False         Cyan
+[shepherd] Planned invocation of shepherd-task-00-init-campaign.ps1:                                                                               False     DarkGray
+  & 'C:\Users\edburns\.copilot\plugins\shepherd-task\scripts\shepherd-task-00-init-campaign.ps1' `                                                 False     DarkGray
+      -CampaignIssueNumber <CAMPAIGN_ISSUE_NUMBER> `                                                                                               False     DarkGray
+      -CampaignShortname 'arrival-deadline-control' `                                                                                              False     DarkGray
+      -BaseBranch 'experiment/shepherd-control' `                                                                                                  False     DarkGray
+      -Repo 'edburns/dd-3069621-cargotracker-win32-x64'                                                                                            False     DarkGray
+[shepherd] Creating campaign issue 1 in https://github.com/edburns/dd-3069621-cargotracker-win32-x64                                               False        White
+                                                                                                                                                   False         Gray
+[shepherd] Stage 00 - Initialize campaign                                                                                                          False         Cyan
+[shepherd] Actual invocation of shepherd-task-00-init-campaign.ps1:                                                                                False      Magenta
+  & 'C:\Users\edburns\.copilot\plugins\shepherd-task\scripts\shepherd-task-00-init-campaign.ps1' `                                                 False      Magenta
+      -CampaignIssueNumber '1' `                                                                                                                   False      Magenta
+      -CampaignShortname 'arrival-deadline-control' `                                                                                              False      Magenta
+      -BaseBranch 'experiment/shepherd-control' `                                                                                                  False      Magenta
+      -Repo 'edburns/dd-3069621-cargotracker-win32-x64'                                                                                            False      Magenta
+                                                                                                                                                   False         Gray
+[shepherd] Stage 10 - Create ignorance-reduction plan                                                                                              False         Cyan
+[shepherd] Normal usage invokes skill shepherd-task-10-create-ignorance-reduction-plan.                                                            False         Gray
+[shepherd] Human and Copilot research then fills every implementation-gating Resolution block.                                                     False         Gray
+[shepherd] This control fixture substituted an already-resolved plan for Stage 10 and the research gate.                                           False         Gray
+[shepherd] Working directory: C:\Users\edburns\workareas\dd-3069621-cargotracker-win32-x64-shepherd-control                                        False         Gray
+                                                                                                                                                   False         Gray
+[shepherd] Stage 15 - Prepare Stage 20                                                                                                             False         Cyan
+[shepherd] Planned invocation of shepherd-task-15-prepare-create-issues.ps1:                                                                       False     DarkGray
+  & 'C:\Users\edburns\.copilot\plugins\shepherd-task\scripts\shepherd-task-15-prepare-create-issues.ps1' `                                         False     DarkGray
+      -CampaignMetadataDirectory '1-arrival-deadline-control-remove-before-merge' `                                                                False     DarkGray
+      -PassThru                                                                                                                                    False     DarkGray
+                                                                                                                                                   False         Gray
+[shepherd] Stage 20 - Create issues from the resolved plan                                                                                         False         Cyan
+[shepherd] Stage 15 will generate a launcher that invokes skill shepherd-task-20-create-issues-from-plan.                                          False         Gray
+                                                                                                                                                   False         Gray
+[shepherd] Stage 25 - Dispatch ordered issue list after Stage 20                                                                                   False         Cyan
+[shepherd] Planned invocation of shepherd-task-25-given-list.ps1:                                                                                  False     DarkGray
+  & 'C:\Users\edburns\.copilot\plugins\shepherd-task\scripts\shepherd-task-25-given-list.ps1' `                                                    False     DarkGray
+      -TaskIssues <TASK_ISSUE_LIST> `                                                                                                              False     DarkGray
+      -CampaignMetadataDirectory '1-arrival-deadline-control-remove-before-merge'                                                                  False     DarkGray
+[shepherd] Working directory: C:\Users\edburns\workareas\dd-3069621-cargotracker-win32-x64-shepherd-control                                        False         Gray
+                                                                                                                                                   False         Gray
+[shepherd] Stage 15 - Prepare Stage 20                                                                                                             False         Cyan
+[shepherd] Actual invocation of shepherd-task-15-prepare-create-issues.ps1:                                                                        False      Magenta
+  & 'C:\Users\edburns\.copilot\plugins\shepherd-task\scripts\shepherd-task-15-prepare-create-issues.ps1' `                                         False      Magenta
+      -CampaignMetadataDirectory '1-arrival-deadline-control-remove-before-merge' `                                                                False      Magenta
+      -PassThru                                                                                                                                    False      Magenta
+[shepherd] Stage 20 completed through the generated launcher, and the fixture verified all five issue bodies.                                      False        White
+                                                                                                                                                   False         Gray
+[shepherd] Stage 25 - Dispatch ordered issue list                                                                                                  False         Cyan
+[shepherd] Actual invocation of shepherd-task-25-given-list.ps1:                                                                                   False      Magenta
+  & 'C:\Users\edburns\.copilot\plugins\shepherd-task\scripts\shepherd-task-25-given-list.ps1' `                                                    False      Magenta
+      -TaskIssues '2,3,4,5,6' `                                                                                                                    False      Magenta
+      -CampaignMetadataDirectory '1-arrival-deadline-control-remove-before-merge'                                                                  False      Magenta
+[shepherd] Stage 25 will process issues 2,3,4,5,6 serially.                                                                                        False        White
+[shepherd] For each issue, Stage 30 moves assignment to the Ready-for-review boundary, then Stage 40 reviews and merges it.                        False         Gray
+[shepherd] Stage 50 creates the campaign post-mortem after success or failure.                                                                     False         Gray
+[shepherd] Run evidence will be written beneath: C:\Users\edburns\workareas\dd-3069621-cargotracker-win32-x64-shepherd-control\1-arrival-dead…     False         Gray
+[shepherd] Detailed per-issue output is hidden; use -ShowShepherdTaskScriptOutput to display it.
+[shepherd] Captured output from failed child script:
+Campaign ID: ce692e79-febf-4b62-be97-8761f1b47240                                                                                                  False          Red
+Lesson propagation: off                                                                                                                            False          Red
+Shepherd-task version: 1.0.5                                                                                                                       False          Red
+Logging shepherd-task-25-given-list run to: C:\Users\edburns\workareas\dd-3069621-cargotracker-win32-x64-shepherd-control\1-arrival-deadline-…     False          Red
+[shepherd-task] Phase 1: Launching copilot --yolo for task #2                                                                                      False          Red
+[shepherd-task] Phase 1 prompt: Invoke skill `shepherd-task-30-from-assignment-to-ready` with these inputs:                                        False          Red
+                                                                                                                                                   False          Red
+- TASK_ISSUE: 2                                                                                                                                    False          Red
+- BASE_BRANCH: experiment/shepherd-control                                                                                                         False          Red
+- REPO: edburns/dd-3069621-cargotracker-win32-x64                                                                                                  False          Red
+- CAMPAIGN_ID: ce692e79-febf-4b62-be97-8761f1b47240                                                                                                False          Red
+- CAMPAIGN_METADATA_DIRECTORY: 1-arrival-deadline-control-remove-before-merge                                                                      False          Red
+- LESSON_PROPAGATION: off                                                                                                                          False          Red
+Session exported to: C:\Users\edburns\AppData\Local\Temp\shepherd-redact-b96f90ae2f8544ea92c9ebc437fcde91\session.md                               False          Red
+[shepherd-task] Phase 1: copilot exited. Verifying semantic outcome and state...                                                                   False          Red
+[shepherd-task] Found PR #7                                                                                                                        False          Red
+[shepherd-task] Phase 1 VERIFIED: PR #7 is ready. CI passing, no unresolved comments.                                                              False          Red
+[shepherd-task] Phase 2: Launching copilot --yolo for PR #7                                                                                        False          Red
+[shepherd-task] Phase 2 prompt: Invoke skill `shepherd-task-40-from-ready-to-merged-to-base` with these inputs:                                    False          Red
+                                                                                                                                                   False          Red
+- TASK_ISSUE: 2                                                                                                                                    False          Red
+- BASE_BRANCH: experiment/shepherd-control                                                                                                         False          Red
+- REPO: edburns/dd-3069621-cargotracker-win32-x64                                                                                                  False          Red
+- REMOTE: origin                                                                                                                                   False          Red
+- CAMPAIGN_ID: ce692e79-febf-4b62-be97-8761f1b47240                                                                                                False          Red
+- CAMPAIGN_METADATA_DIRECTORY: 1-arrival-deadline-control-remove-before-merge                                                                      False          Red
+- LESSON_PROPAGATION: off                                                                                                                          False          Red
+- PR_NUMBER: 7                                                                                                                                     False          Red
+Session exported to: C:\Users\edburns\AppData\Local\Temp\shepherd-redact-dd446f0151204315b57db341a4ad3dcc\session.md                               False          Red
+[shepherd-task] Phase 2: copilot exited. Verifying semantic outcome and state...                                                                   False          Red
+[shepherd-task] SHEPHERD TASK COMPLETE: Task #2 has been fully shepherded.                                                                         False          Red
+[shepherd-task] PR #7 merged to experiment/shepherd-control.                                                                                       False          Red
+[shepherd-task] Phase 1: Launching copilot --yolo for task #3                                                                                      False          Red
+[shepherd-task] Phase 1 prompt: Invoke skill `shepherd-task-30-from-assignment-to-ready` with these inputs:                                        False          Red
+                                                                                                                                                   False          Red
+- TASK_ISSUE: 3                                                                                                                                    False          Red
+- BASE_BRANCH: experiment/shepherd-control                                                                                                         False          Red
+- REPO: edburns/dd-3069621-cargotracker-win32-x64                                                                                                  False          Red
+- CAMPAIGN_ID: ce692e79-febf-4b62-be97-8761f1b47240                                                                                                False          Red
+- CAMPAIGN_METADATA_DIRECTORY: 1-arrival-deadline-control-remove-before-merge                                                                      False          Red
+- LESSON_PROPAGATION: off                                                                                                                          False          Red
+Session exported to: C:\Users\edburns\AppData\Local\Temp\shepherd-redact-07c8dbfecb144e5fb48362b74e4d843a\session.md                               False          Red
+[shepherd-task] Phase 1: copilot exited. Verifying semantic outcome and state...                                                                   False          Red
+[shepherd-task] Found PR #8                                                                                                                        False          Red
+[shepherd-task] Phase 1 VERIFIED: PR #8 is ready. CI passing, no unresolved comments.                                                              False          Red
+[shepherd-task] Phase 2: Launching copilot --yolo for PR #8                                                                                        False          Red
+[shepherd-task] Phase 2 prompt: Invoke skill `shepherd-task-40-from-ready-to-merged-to-base` with these inputs:                                    False          Red
+                                                                                                                                                   False          Red
+- TASK_ISSUE: 3                                                                                                                                    False          Red
+- BASE_BRANCH: experiment/shepherd-control                                                                                                         False          Red
+- REPO: edburns/dd-3069621-cargotracker-win32-x64                                                                                                  False          Red
+- REMOTE: origin                                                                                                                                   False          Red
+- CAMPAIGN_ID: ce692e79-febf-4b62-be97-8761f1b47240                                                                                                False          Red
+- CAMPAIGN_METADATA_DIRECTORY: 1-arrival-deadline-control-remove-before-merge                                                                      False          Red
+- LESSON_PROPAGATION: off                                                                                                                          False          Red
+- PR_NUMBER: 8                                                                                                                                     False          Red
+Session exported to: C:\Users\edburns\AppData\Local\Temp\shepherd-redact-5d2de1f6f40b47d39c14c1a981edfe2f\session.md                               False          Red
+[shepherd-task] Phase 2: copilot exited. Verifying semantic outcome and state...                                                                   False          Red
+[shepherd-task] SHEPHERD TASK COMPLETE: Task #3 has been fully shepherded.                                                                         False          Red
+[shepherd-task] PR #8 merged to experiment/shepherd-control.                                                                                       False          Red
+[shepherd-task] Phase 1: Launching copilot --yolo for task #4                                                                                      False          Red
+[shepherd-task] Phase 1 prompt: Invoke skill `shepherd-task-30-from-assignment-to-ready` with these inputs:                                        False          Red
+                                                                                                                                                   False          Red
+- TASK_ISSUE: 4                                                                                                                                    False          Red
+- BASE_BRANCH: experiment/shepherd-control                                                                                                         False          Red
+- REPO: edburns/dd-3069621-cargotracker-win32-x64                                                                                                  False          Red
+- CAMPAIGN_ID: ce692e79-febf-4b62-be97-8761f1b47240                                                                                                False          Red
+- CAMPAIGN_METADATA_DIRECTORY: 1-arrival-deadline-control-remove-before-merge                                                                      False          Red
+- LESSON_PROPAGATION: off                                                                                                                          False          Red
+Session exported to: C:\Users\edburns\AppData\Local\Temp\shepherd-redact-bca6dbd50806447c8ce3ff143d36d13d\session.md                               False          Red
+[shepherd-task] Phase 1: copilot exited. Verifying semantic outcome and state...                                                                   False          Red
+[shepherd-task] Found PR #9                                                                                                                        False          Red
+[shepherd-task] Phase 1 VERIFIED: PR #9 is ready. CI passing, no unresolved comments.                                                              False          Red
+[shepherd-task] Phase 2: Launching copilot --yolo for PR #9                                                                                        False          Red
+[shepherd-task] Phase 2 prompt: Invoke skill `shepherd-task-40-from-ready-to-merged-to-base` with these inputs:                                    False          Red
+                                                                                                                                                   False          Red
+- TASK_ISSUE: 4                                                                                                                                    False          Red
+- BASE_BRANCH: experiment/shepherd-control                                                                                                         False          Red
+- REPO: edburns/dd-3069621-cargotracker-win32-x64                                                                                                  False          Red
+- REMOTE: origin                                                                                                                                   False          Red
+- CAMPAIGN_ID: ce692e79-febf-4b62-be97-8761f1b47240                                                                                                False          Red
+- CAMPAIGN_METADATA_DIRECTORY: 1-arrival-deadline-control-remove-before-merge                                                                      False          Red
+- LESSON_PROPAGATION: off                                                                                                                          False          Red
+- PR_NUMBER: 9                                                                                                                                     False          Red
+Session exported to: C:\Users\edburns\AppData\Local\Temp\shepherd-redact-c25af3a2554a4ea4b78b5d18bd484ad8\session.md                               False          Red
+[shepherd-task] Phase 2: copilot exited. Verifying semantic outcome and state...                                                                   False          Red
+[shepherd-task] SHEPHERD TASK COMPLETE: Task #4 has been fully shepherded.                                                                         False          Red
+[shepherd-task] PR #9 merged to experiment/shepherd-control.                                                                                       False          Red
+[shepherd-task] Phase 1: Launching copilot --yolo for task #5                                                                                      False          Red
+[shepherd-task] Phase 1 prompt: Invoke skill `shepherd-task-30-from-assignment-to-ready` with these inputs:                                        False          Red
+                                                                                                                                                   False          Red
+- TASK_ISSUE: 5                                                                                                                                    False          Red
+- BASE_BRANCH: experiment/shepherd-control                                                                                                         False          Red
+- REPO: edburns/dd-3069621-cargotracker-win32-x64                                                                                                  False          Red
+- CAMPAIGN_ID: ce692e79-febf-4b62-be97-8761f1b47240                                                                                                False          Red
+- CAMPAIGN_METADATA_DIRECTORY: 1-arrival-deadline-control-remove-before-merge                                                                      False          Red
+- LESSON_PROPAGATION: off                                                                                                                          False          Red
+Session exported to: C:\Users\edburns\AppData\Local\Temp\shepherd-redact-39eb3ffa828c43529645415925d8f315\session.md                               False          Red
+[shepherd-task] Phase 1: copilot exited. Verifying semantic outcome and state...                                                                   False          Red
+Exception: Stage 30 reported semantic failure: SHEPHERD FAILED: PR #10 exceeded the mandatory 10-minute remediation window, so Stage 30 fails…     False          Red
+[shepherd-task] Stage 50: Generating campaign post-mortem...                                                                                       False          Red
+[shepherd-task] Stage 50 report:  C:\Users\edburns\workareas\dd-3069621-cargotracker-win32-x64-shepherd-control\1-arrival-deadline-control-re…     False          Red
+[shepherd-task] Stage 50 session: C:\Users\edburns\workareas\dd-3069621-cargotracker-win32-x64-shepherd-control\1-arrival-deadline-control-re…     False          Red
+[shepherd-task] Stage 50 events:  C:\Users\edburns\workareas\dd-3069621-cargotracker-win32-x64-shepherd-control\1-arrival-deadline-control-re…     False          Red
+[shepherd-task] Stage 50 prompt: Invoke skill `shepherd-task-50-create-post-mortem` with these inputs:                                             False          Red
+- SHEPHERD_LOG_DIR: C:\Users\edburns\workareas\dd-3069621-cargotracker-win32-x64-shepherd-control\1-arrival-deadline-control-remove-before-me…     False          Red
+- SCRIPT_EXIT_CODE: 1                                                                                                                              False          Red
+- TASK_ISSUES: 2,3,4,5,6                                                                                                                           False          Red
+- BASE_BRANCH: experiment/shepherd-control                                                                                                         False          Red
+- REPO: edburns/dd-3069621-cargotracker-win32-x64                                                                                                  False          Red
+- CAMPAIGN_ID: ce692e79-febf-4b62-be97-8761f1b47240                                                                                                False          Red
+- CAMPAIGN_METADATA_DIRECTORY: 1-arrival-deadline-control-remove-before-merge                                                                      False          Red
+- LESSON_PROPAGATION: off                                                                                                                          False          Red
+                                                                                                                                                   False          Red
+Write the report to:                                                                                                                               False          Red
+- OUTPUT_FILE: C:\Users\edburns\workareas\dd-3069621-cargotracker-win32-x64-shepherd-control\1-arrival-deadline-control-remove-before-merge\s…     False          Red
+Session exported to: C:\Users\edburns\AppData\Local\Temp\shepherd-redact-d2ec8ae6e73445c0a9d5903208b3b5ee\session.md                               False          Red
+[shepherd-task] Stage 50 COMPLETE: Post-mortem created: C:\Users\edburns\workareas\dd-3069621-cargotracker-win32-x64-shepherd-control\1-arriv…     False          Red
+                                                                                                                                                   False         Gray
+=== RUN FAILED DURING: running control stage 25 ===                                                                                                False          Red
+[shepherd] No automated cleanup was performed. Preserve and inspect any paths that exist:
+  C:\Users\edburns\workareas\dd-3069621-cargotracker-win32-x64-shepherd-target                                                                     False       Yellow
+  C:\Users\edburns\workareas\dd-3069621-cargotracker-win32-x64-shepherd-control                                                                    False       Yellow
+  C:\Users\edburns\workareas\dd-3069621-cargotracker-win32-x64-shepherd-control\1-arrival-deadline-control-remove-before-merge                     False       Yellow
